@@ -62,7 +62,7 @@ public class ConnectorImpl
         if (map.containsKey("host") && map.containsKey("port")) {
           // both host and port defined, assume regular JDBC driver in
           // 'jdbc:driver://host:port/database' format
-          connectionString += String.format("%s:%s/%s", map.get("host"), map.get("port"));
+          connectionString += String.format("%s:%s", map.get("host"), map.get("port"));
         } else if (map.containsKey("host") || map.containsKey("port")) {
           // either 'host' or 'port' is defined, but not both
           throw new Error("'host' or 'port' is missing, assumed none or both to exist in connection string");
