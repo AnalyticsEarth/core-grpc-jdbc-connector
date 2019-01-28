@@ -62,18 +62,17 @@ public class ConnectorImpl
         if (map.containsKey("host") && map.containsKey("port")) {
           // both host and port defined, assume regular JDBC driver in
           // 'jdbc:driver://host:port/database' format
-          connectionString += String.format("%s:%s/%s", map.get("host"), map.get("port"), map.get("database"));
+          connectionString += String.format("%s:%s/%s", map.get("host"), map.get("port"));
         } else if (map.containsKey("host") || map.containsKey("port")) {
           // either 'host' or 'port' is defined, but not both
           throw new Error("'host' or 'port' is missing, assumed none or both to exist in connection string");
-        } else {
+        }
           // no 'host' or 'path' defined, assume a driver like Athena with custom properties
           // so just pass along all of them and let the JDBC driver throw exception if needed
-          connectionString += map.entrySet().stream()
-            .filter(e -> !IGNORE_PARAMS.contains(e.getKey()))
-            .map(e -> String.format("%s=%s", e.getKey(), e.getValue()))
-            .collect(joining(";"));
-        }
+        connectionString += map.entrySet().stream()
+        .filter(e -> !IGNORE_PARAMS.contains(e.getKey()))
+        .map(e -> String.format("%s=%s", e.getKey(), e.getValue()))
+        .collect(joining(";"));
 
         Connection conn = null;
         Statement stmt = null;
