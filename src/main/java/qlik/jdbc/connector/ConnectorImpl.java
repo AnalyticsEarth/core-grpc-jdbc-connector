@@ -80,6 +80,7 @@ public class ConnectorImpl
 
         try{
             System.out.println("Connecting to database...");
+            System.out.println(connectionString)
             conn = DriverManager.getConnection(connectionString, request.getConnection().getUser(), request.getConnection().getPassword());
             stmt = conn.createStatement();
 
