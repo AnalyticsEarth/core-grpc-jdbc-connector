@@ -99,6 +99,11 @@
             <artifactId>google-api-services-bigquery</artifactId>
             <version>v2-rev400-1.24.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.simba.googlebigquery.jdbc42</groupId>
+            <artifactId>GoogleBigQueryJDBC42</artifactId>
+            <version>4.2</version>
+        </dependency>        
     </dependencies>
 
     <build>
