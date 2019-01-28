@@ -28,6 +28,10 @@ WORKDIR /usr/src/app
 COPY pom.xml /usr/src/app
 COPY src /usr/src/app/src
 
+# BigQuery JDBC Driver
+COPY GoogleBigQueryJDBC42.jar /usr/src/app
+RUN mvn install:install-file -Dfile=/usr/src/app/GoogleBigQueryJDBC42.jar -DgroupId=com.simba.googlebigquery.jdbc42 -DartifactId=GoogleBigQueryJDBC42 -Dversion=4.2 -Dpackaging=jar
+
 RUN mvn install
 
 # copy target from builder
