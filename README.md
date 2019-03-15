@@ -15,8 +15,6 @@ CUSTOM CONNECT TO "provider=jdbc;driver=bigquery;host=https://www.googleapis.com
 
 # Example JDBC gRPC Connector
 
-[![CircleCI](https://circleci.com/gh/qlik-oss/core-grpc-jdbc-connector.svg?style=shield)](https://circleci.com/gh/qlik-oss/core-grpc-jdbc-connector)
-
 This connector exemplifies how a JDBC gRPC Connector can be written. It contains an example that includes a MySQL Database, a PostgreSQL Database, a QIX Engine and the JDBC gRPC connector.
 
 ## Run example
