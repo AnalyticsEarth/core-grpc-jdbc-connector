@@ -17,7 +17,7 @@ services:
   jdbc-connector:
     build: ../
     ports:
-      - 50051:50051
+      - 50053:50053
     environment:
       DATABASE_FETCH_SIZE: 100000
       MAX_DATA_CHUNK_SIZE: 300
@@ -27,4 +27,4 @@ services:
     image: qlikcore/engine:12.311.0
     ports:
       - 19076:9076
-    command: -S AcceptEULA=${ACCEPT_EULA} -S EnableGrpcCustomConnectors=1 -S GrpcConnectorPlugins="jdbc,jdbc-connector:50051"
+    command: -S AcceptEULA=${ACCEPT_EULA} -S EnableGrpcCustomConnectors=1 -S GrpcConnectorPlugins="jdbc,jdbc-connector:50053"

@@ -55,7 +55,7 @@ public class GrpcServer {
 
         ConnectorImpl connector = new ConnectorImpl(fetchSize, maxDataChunkSize);
 
-        io.grpc.Server server = ServerBuilder.forPort(50051)
+        io.grpc.Server server = ServerBuilder.forPort(50053)
                 .addService(ServerInterceptors.intercept(connector, new HeaderServerInterceptor(connector)))
                 .build()
                 .start();

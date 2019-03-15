@@ -1,3 +1,17 @@
+#JDBC Connector for BigQuery with Storage API
+
+To compile locally add the JAR file to the maven repository:
+```mvn install:install-file -Dfile=GoogleBigQueryJDBC42.jar -DgroupId=com.simba.googlebigquery.jdbc42 -DartifactId=GoogleBigQueryJDBC42 -Dversion=4.2 -Dpackaging=jar```
+
+```bash
+mvn install
+java -jar ./target/core-grpc-jdbc-connector.jar
+```
+
+Example:
+```CUSTOM CONNECT TO "provider=jdbc;driver=bigquery;host=https://www.googleapis.com/bigquery/v2;port=443;ProjectId=<projectID>;OAuthType=0;OAuthServiceAcctEmail=<serviceaccountemail>;OAuthPvtKeyPath=<keypath>;EnableHighThroughPutAPI=1;Timeout=100";
+```
+
 # Example JDBC gRPC Connector
 
 [![CircleCI](https://circleci.com/gh/qlik-oss/core-grpc-jdbc-connector.svg?style=shield)](https://circleci.com/gh/qlik-oss/core-grpc-jdbc-connector)

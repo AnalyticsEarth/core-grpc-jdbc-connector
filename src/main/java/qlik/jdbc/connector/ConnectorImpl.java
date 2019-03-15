@@ -56,6 +56,8 @@ public class ConnectorImpl
 
     public void getData(DataRequest request, StreamObserver<DataChunk> responseObserver) {
         String sql = request.getParameters().getStatement();
+        System.out.println("Connection");
+        System.out.println(sql);
         Map<String, String> map = this.parseConnectionString(request.getConnection().getConnectionString());
         String connectionString = String.format("jdbc:%s://", map.get("driver"));
 
