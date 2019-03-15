@@ -9,7 +9,8 @@ java -jar ./target/core-grpc-jdbc-connector.jar
 ```
 
 Example:
-```CUSTOM CONNECT TO "provider=jdbc;driver=bigquery;host=https://www.googleapis.com/bigquery/v2;port=443;ProjectId=<projectID>;OAuthType=0;OAuthServiceAcctEmail=<serviceaccountemail>;OAuthPvtKeyPath=<keypath>;EnableHighThroughPutAPI=1;Timeout=100";
+```
+CUSTOM CONNECT TO "provider=jdbc;driver=bigquery;host=https://www.googleapis.com/bigquery/v2;port=443;ProjectId=<projectID>;OAuthType=0;OAuthServiceAcctEmail=<serviceaccountemail>;OAuthPvtKeyPath=<keypath>;EnableHighThroughPutAPI=1;Timeout=100";
 ```
 
 # Example JDBC gRPC Connector
