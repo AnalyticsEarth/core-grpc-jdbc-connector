@@ -1,4 +1,4 @@
-#JDBC Connector for BigQuery with Storage API
+# JDBC Connector for BigQuery with Storage API
 
 To compile locally add the JAR file to the maven repository:
 ```mvn install:install-file -Dfile=GoogleBigQueryJDBC42.jar -DgroupId=com.simba.googlebigquery.jdbc42 -DartifactId=GoogleBigQueryJDBC42 -Dversion=4.2 -Dpackaging=jar```
